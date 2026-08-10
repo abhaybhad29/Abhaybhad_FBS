@@ -1,0 +1,22 @@
+#Write a program to check if entered number is a palindrome or not.
+def palindrome(n):
+    original = n
+    rev = 0
+
+    while n > 0:
+        digit = n % 10
+        rev = rev * 10 + digit
+        n = n // 10
+
+    if original == rev:
+        return True
+    else:
+        return False
+
+
+n = int(input("Enter a number: "))
+
+if palindrome(n):
+    print("Palindrome number")
+else:
+    print("Not a palindrome number")
