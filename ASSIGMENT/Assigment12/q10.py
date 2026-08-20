@@ -1,0 +1,30 @@
+#10.Python Program to Take in Two Strings and Display the Larger String
+#without Using Built-in Functions
+def findLength(string):
+    count = 0
+
+    for ch in string:
+        count += 1
+
+    return count
+
+
+def largerString(str1, str2):
+    length1 = findLength(str1)
+    length2 = findLength(str2)
+
+    if length1 > length2:
+        return str1
+    elif length2 > length1:
+        return str2
+    else:
+        return "Both strings are of equal length"
+
+
+# Main program
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+
+result = largerString(str1, str2)
+
+print("Result:", result)
